@@ -1,5 +1,6 @@
 <?php namespace Riari\Forum\Models;
 
+use HipsterJazzbo\Landlord\BelongsToTenant;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\Gate;
 use Riari\Forum\Models\Category;
@@ -8,7 +9,7 @@ use Riari\Forum\Models\Traits\HasAuthor;
 
 class Thread extends BaseModel
 {
-    use SoftDeletes, HasAuthor;
+    use SoftDeletes, HasAuthor, BelongsToTenant;
 
     /**
      * Eloquent attributes

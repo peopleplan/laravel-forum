@@ -1,11 +1,13 @@
 <?php namespace Riari\Forum\Models;
 
+use HipsterJazzbo\Landlord\BelongsToTenant;
 use Illuminate\Support\Facades\Gate;
 use Riari\Forum\Support\Traits\CachesData;
 
+
 class Category extends BaseModel
 {
-    use CachesData;
+    use CachesData, BelongsToTenant;
 
 	/**
 	 * The table associated with the model.

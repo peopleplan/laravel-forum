@@ -1,12 +1,13 @@
 <?php namespace Riari\Forum\Models;
 
+use HipsterJazzbo\Landlord\BelongsToTenant;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Riari\Forum\Models\Traits\HasAuthor;
 use Riari\Forum\Support\Traits\CachesData;
 
 class Post extends BaseModel
 {
-    use SoftDeletes, HasAuthor, CachesData;
+    use SoftDeletes, HasAuthor, CachesData, BelongsToTenant;
 
     /**
      * The table associated with the model.
